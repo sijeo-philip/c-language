@@ -5,3 +5,10 @@ xxd -e -c 4 -g 4 main.bin
 
 qemu-system-risv32 -S -M virt -nographic -bios none -kernel main.elf -gdb tcp::1234
 gdb-multiarch main.elf -ex "target remote localhost:1234" -ex "break _start" -ex "continue" -q 
+
+
+Assembly
+    1. Directives
+    2. Instructions
+    3. Labels
+    4. Comments .... #/;
